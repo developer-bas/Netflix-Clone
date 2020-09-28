@@ -31,6 +31,7 @@
 		15E0291E251DC2E700B4584D /* VideoPreviewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E0291D251DC2E700B4584D /* VideoPreviewImage.swift */; };
 		15E02923251DC5F800B4584D /* TrailerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E02922251DC5F800B4584D /* TrailerList.swift */; };
 		15E02928251DDDAC00B4584D /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E02927251DDDAC00B4584D /* EpisodesView.swift */; };
+		15E31BB125210FC100195552 /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E31BB025210FC100195552 /* HomeStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		15E0291D251DC2E700B4584D /* VideoPreviewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewImage.swift; sourceTree = "<group>"; };
 		15E02922251DC5F800B4584D /* TrailerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerList.swift; sourceTree = "<group>"; };
 		15E02927251DDDAC00B4584D /* EpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesView.swift; sourceTree = "<group>"; };
+		15E31BB025210FC100195552 /* HomeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				15A38B5A25188BE2003BAD85 /* HomeVM.swift */,
 				15A38B4025188469003BAD85 /* HomeView.swift */,
+				15E31BB025210FC100195552 /* HomeStack.swift */,
 			);
 			path = HomeViews;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				15A38B60251898A0003BAD85 /* TopMoviePreview.swift in Sources */,
 				15A38B5625188A07003BAD85 /* Globalhelpers.swift in Sources */,
 				15E02908251DB55000B4584D /* MoreLikeThis.swift in Sources */,
+				15E31BB125210FC100195552 /* HomeStack.swift in Sources */,
 				156970D225187FDD0020F314 /* NetflixCloneApp.swift in Sources */,
 				15E02923251DC5F800B4584D /* TrailerList.swift in Sources */,
 				15A38B6525189E4D003BAD85 /* SmallVerticalButton.swift in Sources */,
