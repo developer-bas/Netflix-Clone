@@ -37,7 +37,7 @@ class SearchVM: ObservableObject {
     
     private func getPopularMovies(){
         
-        self.popularMovies = [] //generateMOVIES(21)
+        self.popularMovies = generateMovies(40)
     }
     
     private func getSearchResults(forText text:String){
@@ -48,8 +48,8 @@ class SearchVM: ObservableObject {
                 self.searchResults = []
                 self.setViewState(to: .empty)
             }else{
-//                let movies = generateMovies(21)
-                self.searchResults = []
+                let movies = generateMovies(21)
+                self.searchResults = movies
                 self.setViewState(to: .ready)
             }
         })
