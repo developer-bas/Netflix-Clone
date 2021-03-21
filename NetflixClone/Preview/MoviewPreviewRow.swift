@@ -23,14 +23,14 @@ struct MoviewPreviewRow: View {
                     ForEach(0..<movies.count){ movieIndex in
                         let movie = movies[movieIndex]
                         MoviewPreviewCell(movie: movie)
-                            .frame(width: 120, height: 220)
+                            .frame(width: 120, height: 120)
                             .padding(.trailing, 14)
-                            .padding(.leading, 14)
+                            .padding(.leading, 6)
                     }
                 }
             })
         }
-        .frame(height: 230)
+        .frame(height: 210)
     }
 }
 
@@ -42,7 +42,7 @@ struct MoviewPreviewRow_Previews: PreviewProvider {
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
             
-            MoviewPreviewRow(movies: [exampleMovie1,exampleMovie2,exampleMovie3, exampleMovie4])
+            MoviewPreviewRow(movies: exampleMovies)
         }
         
     }

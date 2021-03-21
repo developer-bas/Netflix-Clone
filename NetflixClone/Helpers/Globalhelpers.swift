@@ -154,7 +154,7 @@ let exampleMovie6 = Movie(
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
     moreLikeThisMovies: [],
     promotionHeadline: "Watch Season 6 Now",
-    trailers: exampleTrailers, previewImageName: "darkPreview" , previewVideoUrl: exampleVideoURL)
+    trailers: exampleTrailers, previewImageName: "travelersPreview" , previewVideoUrl: exampleVideoURL)
 
 let exampleMovie7 = Movie(
     id: UUID().uuidString,

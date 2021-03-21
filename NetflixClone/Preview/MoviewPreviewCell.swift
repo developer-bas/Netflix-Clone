@@ -16,7 +16,7 @@ struct MoviewPreviewCell: View {
         ZStack(alignment: .bottom) {
             KFImage(movie.thumbnailURL)
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
                 .clipShape(Circle())
                 .overlay(
                     Circle()
@@ -26,7 +26,7 @@ struct MoviewPreviewCell: View {
             Image(movie.previewImageName)
                 .resizable()
                 .scaledToFit()
-                .offset(y: -20)
+                .offset(y: -30)
                 .frame(height: 65)
         }
 //        .frame(height: 100)
@@ -39,8 +39,8 @@ struct MoviewPreviewCell_Previews: PreviewProvider {
             Color.black
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
-            MoviewPreviewCell(movie: exampleMovie1)
-                .frame(width: 150,height: 350)
+            MoviewPreviewCell(movie: exampleMovie6)
+                .frame(width: 150,height: 50)
         }
     }
 }
