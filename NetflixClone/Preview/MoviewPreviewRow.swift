@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct MoviewPreviewRow: View {
+struct MoviePreviewRow: View {
     var movies: [Movie]
     
-    @Binding var showPreviewFullScreen : Bool
-    @Binding var previewStartingIndex : Int
+    @Binding var showPreviewFullscreen: Bool
+    @Binding var previewStartingIndex: Int
     
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             Text("Previews")
                 .font(.title3)
                 .bold()
@@ -22,35 +22,36 @@ struct MoviewPreviewRow: View {
                 .padding(.leading, 6)
             
             ScrollView(.horizontal, showsIndicators: false, content: {
-                LazyHStack{
-                    ForEach(0..<movies.count){ movieIndex in
+                LazyHStack {
+                    ForEach(0..<movies.count) { movieIndex in
                         let movie = movies[movieIndex]
-                        MoviewPreviewCell(movie: movie)
+                        
+                        MoviePreviewCell(movie: movie)
                             .frame(width: 120, height: 120)
                             .padding(.trailing, 14)
                             .padding(.leading, 6)
-                            .onTapGesture( perform: {
+                            .onTapGesture(perform: {
                                 previewStartingIndex = movieIndex
-                                showPreviewFullScreen = true
+                                showPreviewFullscreen = true
                             })
                     }
                 }
             })
         }
-        .frame(height: 210)
+        .frame(height: 185)
     }
 }
 
-struct MoviewPreviewRow_Previews: PreviewProvider {
+struct MoviePreviewRow_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            
             Color.black
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .edgesIgnoringSafeArea(.all)
             
-            
-            MoviewPreviewRow(movies: exampleMovies,showPreviewFullScreen: .constant(false),previewStartingIndex: .constant(0))
+            MoviePreviewRow(
+                movies: exampleMovies,
+                showPreviewFullscreen: .constant(false),
+                previewStartingIndex: .constant(0))
         }
-        
     }
 }

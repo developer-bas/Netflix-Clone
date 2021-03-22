@@ -9,13 +9,14 @@ import SwiftUI
 import VideoPlayer
 
 struct TrailerPlayerView: View {
-    var videoURL : URL?
-    @Binding var playVideo : Bool
+    var videoURL: URL?
+    
+    @Binding var playVideo: Bool
     
     var body: some View {
         if videoURL != nil {
             VideoPlayer(url: videoURL!, play: $playVideo)
-        } else{
+        } else {
             Text("Could not load video")
         }
     }

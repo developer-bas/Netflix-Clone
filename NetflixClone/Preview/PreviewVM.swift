@@ -6,14 +6,13 @@
 //
 
 import Foundation
-class PreviewVM : ObservableObject {
+
+class PreviewVM: ObservableObject {
     
     var movie: Movie
     
     init(movie: Movie) {
         self.movie = movie
     }
-    
-    
     
 }

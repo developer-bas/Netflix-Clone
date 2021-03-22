@@ -8,10 +8,11 @@
 import SwiftUI
 import KingfisherSwiftUI
 
-struct MoviewPreviewCell: View {
+struct MoviePreviewCell: View {
     var movie: Movie
     
-    let color : [Color] = [.yellow,.red,.blue, .green, .orange]
+    let colors: [Color] = [.yellow, .gray, .pink, .red, .blue, .green, .orange]
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             KFImage(movie.thumbnailURL)
@@ -20,27 +21,28 @@ struct MoviewPreviewCell: View {
                 .clipShape(Circle())
                 .overlay(
                     Circle()
-                        .stroke(lineWidth: 5.0)
-                        .foregroundColor(color.randomElement())
+                        .stroke(lineWidth: 3.0)
+                        .foregroundColor(colors.randomElement())
             )
+            
             Image(movie.previewImageName)
                 .resizable()
                 .scaledToFit()
-                .offset(y: -30)
+                .offset(y: -20)
                 .frame(height: 65)
         }
-//        .frame(height: 100)
+        
     }
 }
 
-struct MoviewPreviewCell_Previews: PreviewProvider {
+struct MoviePreviewCell_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.black
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .edgesIgnoringSafeArea(.all)
             
-            MoviewPreviewCell(movie: exampleMovie6)
-                .frame(width: 150,height: 50)
+            MoviePreviewCell(movie: exampleMovie1)
+                .frame(width: 165, height: 50)
         }
     }
 }
