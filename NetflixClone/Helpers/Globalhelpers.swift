@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-let exampleVideoURL = URL(string: "https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4")!
+let exampleVideoURL = URL(string: "https://assets.mixkit.co/videos/preview/mixkit-rolling-on-roller-skates-on-the-ground-of-a-parking-34551-large.mp4")!
 
 let exampleImageURL = URL(string: "https://picsum.photos/300/104")!
 let exampleImageURL2 = URL(string: "https://picsum.photos/300/105")!
@@ -81,11 +81,11 @@ let exampleMovie1 = Movie(
     episodes: allExampleEpisodes, year: 2020,
     rating: "TV-MA",
     numberOfSeasons: 2,
-    defaultEpisodeInfo: exampleEpisodeInfo1,
+    accentColor : Color.blue, defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
     moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6, exampleMovie7],
-    trailers: exampleTrailers, previewImageName: "darkPreview", previewVideoUrl: exampleVideoURL )
+    trailers: exampleTrailers, previewImageName: "darkPreview", previewVideoUrl: exampleVideoURL)
 
 let exampleMovie2 = Movie(
     id: UUID().uuidString,
