@@ -13,7 +13,11 @@ struct HomeStack: View {
     var topRowSelection: HomeTopRow
     var selectedGenre :HomeGenre
     
+    
+    
     @Binding var movieDetailToShow : Movie?
+    @Binding var showPreviewFullScreen : Bool
+    @Binding var previewStartingIndex : Int
     
     var body: some View {
         ForEach(vm.allCategories, id: \.self){ category in
@@ -45,6 +49,6 @@ struct HomeStack: View {
 }
 struct HomeStack_Previews: PreviewProvider {
     static var previews: some View {
-        HomeStack(vm: HomeVM(), topRowSelection: .home, selectedGenre: .AllGenres, movieDetailToShow: .constant(nil))
+        HomeStack(vm: HomeVM(), topRowSelection: .home, selectedGenre: .AllGenres, movieDetailToShow: .constant(nil),showPreviewFullScreen: .constant(false),previewStartingIndex: .constant(0))
     }
 }
